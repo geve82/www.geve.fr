@@ -1,0 +1,16 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Owner: Grégory EVE
+  Site:
+  Twitter: @geve82
+  Location: Paris, France
+
+/* SITE */
+  Last update: 2012/07/21
+  Standards: HTML5, CSS3
+  Components: Jekyll, jQuery
+  Doctype: HTML5
+

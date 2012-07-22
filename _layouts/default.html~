@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.author.name }} | {{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <link rel="author" href="humans.txt">
+
+    <link href="/vendor/twitter/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/twitter/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/favicon.ico">
+  </head>
+
+  <body>
+    {% include navbar.html %}
+
+    <div class="container">
+      <div class="content">
+        {{ content }}
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; {{ site.author.name }}, architecte web et expert PHP. </p>
+      </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/vendor/twitter/js/bootstrap.min.js"></script>
+  </body>
+</html>

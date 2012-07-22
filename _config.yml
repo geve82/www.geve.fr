@@ -1,0 +1,19 @@
+exclude: [".rvmrc", "README.md", "Rakefile", "Gemfile", "Gemfile.lock"]
+
+auto:      true
+safe:      false
+lsi:       true
+pygments:  true
+permalink: /news/:title/
+markdown:  rdiscount
+
+# custom config
+cachebust: 1
+
+author :
+  name : Grégory EVE
+  github : geve82
+  twitter : geve82
+
+#plugins
+#MY_URL : http://www.geve.fr
