@@ -1,0 +1,52 @@
+---
+layout: default
+title:  Contact
+id: contact
+---
+
+<div class="row-fluid">
+	<div id="wufoo-z7x3p9" class="span8">
+		Remplissez mon <a href="http://geve.wufoo.com/forms/z7x3p9">formulaire de contact</a>.
+	</div>
+	<div class="span4" itemscope itemtype="http://schema.org/Person">
+	    	<strong itemprop="name">Grégory EVE</strong><br>
+		<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+			<span itemprop="streetAddress">58, avenue de Clichy</span><br>
+			<span itemprop="postalCode">75018</span> <span itemprop="addressLocality">Paris</span><br>
+			<span itemprop="addressCountry">France</span><br>
+			<abbr title="Téléphone">Tél:</abbr> <span itemprop="telephone">06.81.19.28.49</span><br><br>
+			<a href="https://maps.google.com/maps?f=q&source=s_q&hl=fr&geocode=&q=58+Avenue+de+Clichy,+Paris,+France&sll=48.887171,2.325762&sspn=0.006801,0.016512&vpsrc=0&t=h&ie=UTF8&hq=&hnear=58+Avenue+de+Clichy,+75018+Paris,+%C3%8Ele-de-France,+France&z=17&iwloc=A"></a><img class="thumbnail" src="https://mts0.google.com/vt/data=-cGRplGoW9fY8xxdmflOArET1MZIME3bvqkMn5PjDrclPuhRtxS03DfCskittojMm8DKW0Ro8kNGYBVDIxnlWV61l1s0bslSZs18Xjc" /></a>
+		</address>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var z7x3p9;
+	(function(d, t) {
+		var s = d.createElement(t), options = {
+			'userName' : 'geve',
+			'formHash' : 'z7x3p9',
+			'autoResize' : true,
+			'height' : '437',
+			'async' : true,
+			'header' : 'show'
+		};
+		s.src = ('https:' == d.location.protocol ? 'https://' : 'http://')
+				+ 'wufoo.com/scripts/embed/form.js';
+		s.onload = s.onreadystatechange = function() {
+			var rs = this.readyState;
+			if (rs)
+				if (rs != 'complete')
+					if (rs != 'loaded')
+						return;
+			try {
+				z7x3p9 = new WufooForm();
+				z7x3p9.initialize(options);
+				z7x3p9.display();
+			} catch (e) {
+			}
+		};
+		var scr = d.getElementsByTagName(t)[0], par = scr.parentNode;
+		par.insertBefore(s, scr);
+	})(document, 'script');
+</script>

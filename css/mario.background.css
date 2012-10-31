@@ -1,0 +1,54 @@
+#background {
+	width : 100%;
+	height : 100%;
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	overflow-x : hidden;
+	z-index : -1;
+}
+
+#background .level {
+	height : 248px;
+	width : 3392px;
+	position : absolute;
+	bottom : -16px;
+	left : 0px;
+	background-image : url("http://www.nihilogic.dk/blog-files/mariobackground.png");
+/*	overflow-x : hidden;*/
+}
+
+#background .overlay {
+	width : 3392px;
+	height : 100%;
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	background-color : rgba(50,40,20,0.5);
+}
+
+#background .mario-sprite {
+	width : 16px;
+	height : 16px;
+	overflow : hidden;
+	position : absolute;
+	left : -999px;
+}
+
+#background .mario-sprite img {
+	max-width : none;
+	vertical-align: bottom;
+}
+
+
+#background .text-1 {
+	position : absolute;
+	left : 1650px;
+	top : -120px;
+}
+
+#background .text-2 {
+	position : absolute;
+	left : 3100px;
+	top : -180px;
+}

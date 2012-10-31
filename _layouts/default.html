@@ -13,13 +13,16 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+	{% if page.css %}
+	<link href="/css/mario.background.css" rel="stylesheet">
+	{% endif %}
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
   <body>
     {% include navbar.html %}
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/vendor/twitter/js/bootstrap.min.js"></script>
     <div class="container">
       <div class="content">
         {{ content }}
@@ -29,8 +32,6 @@
         <p>&copy; {{ site.author.name }}, architecte web et expert PHP. </p>
       </footer>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="/vendor/twitter/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
     var _gaq = _gaq || [];

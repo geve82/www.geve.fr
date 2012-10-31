@@ -1,4 +1,4 @@
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -9,17 +9,19 @@
           <a class="brand" href="#">{{ site.author.name }}</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="/cv/">CV</a></li>
+              <li{% if page.id == 'home'%} class="active"{% endif %}><a href="/">Home</a></li>
+              <li{% if page.id == 'cv'%} class="active"{% endif %}><a href="/cv/">CV</a></li>
               <li><a href="//github.com/geve82" target="_blank">Github</a></li>
               <li><a href="//gw.geneanet.org/igreg82" target="_blank">Généalogie</a></li>
+              <li{% if page.id == 'contact'%} class="active"{% endif %}><a href="/contact/">Contact</a></li>
             </ul>
 
             <ul class="nav pull-right">
-              <li><a title="Linkedin" href="http://fr.linkedin.com/pub/gr%C3%A9gory-eve/20/130/1a6" target="_blank"><img title="Linkedin" src="/img/icons/linkedin.png" alt="Linkedin" width="20" height="20" /></a></li>
-              <li><a title="Viadeo" href="http://viadeo.com/s/Gg0gC" target="_blank"><img title="Linkedin" src="/img/icons/viadeo.png" alt="Viadeo" width="20" height="20" /></a></li>
-              <li><a title="Twitter" href="http://www.twitter.com/geve82" target="_blank"><img title="Linkedin" src="/img/icons/twitter.png" alt="Twitter" width="20" height="20" /></a></li>
-              <li><a title="Facebook" href="http://www.facebook.com/gregory.eve" target="_blank"><img title="Facebook" src="/img/icons/facebook.png" alt="Twitter" width="20" height="20" /></a></li>
+              <li><a title="Linkedin" href="//fr.linkedin.com/pub/gr%C3%A9gory-eve/20/130/1a6" target="_blank"><img title="Linkedin" src="/img/icons/linkedin.png" alt="Linkedin" width="20" height="20" /></a></li>
+              <li><a title="Viadeo" href="//viadeo.com/s/Gg0gC" target="_blank"><img title="Linkedin" src="/img/icons/viadeo.png" alt="Viadeo" width="20" height="20" /></a></li>
+              <li><a title="Twitter" href="//www.twitter.com/geve82" target="_blank"><img title="Linkedin" src="/img/icons/twitter.png" alt="Twitter" width="20" height="20" /></a></li>
+              <li><a title="Facebook" href="//www.facebook.com/gregory.eve" target="_blank"><img title="Facebook" src="/img/icons/facebook.png" alt="Twitter" width="20" height="20" /></a></li>
+              <li><a title="Google Plus" href="//plus.google.com/100495664853504984612?rel=author" rel="publisher" target="_blank"><img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" width="16" height="16" /></a></li>
             </ul>
           </div>
         </div>
