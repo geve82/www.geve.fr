@@ -1,0 +1,136 @@
+---
+layout: default
+---
+
+<article class="cv">
+  <header class="home-header">
+    <div class="card-panel row">
+      <div class="col s12 m3">
+        <img src="{{ site.author.img_big | prepend: site.baseurl }}" alt="Gregory Eve" height="200" class="circle">
+      </div>
+      <div class="col s12 m9">
+        <h1>{{ site.author.name }}</h1>
+        <h2>{{ page.title_full }}</h2>
+        {% include share-panel.html %}
+      </div>
+    </div>
+  </header>
+  <main class="row">
+    <div class="col s12 m9">
+    {% for experience in site.cv_experience reversed %}
+      <div class="card-panel experience">
+        <h3><i class="material-icons small">business</i> {{ experience.company.name }} ( {{ experience.company.date.start }} à {{ experience.company.date.end }} )</h3>
+        <blockquote>{{experience.company.description}}</blockquote>
+        {% for job in experience.jobs %}
+        <div class="section">
+          <h4 class="section-header"><i class="material-icons small">assignment_ind</i> {{ job.name }},
+            <span class="secondary">{{ job.team }} ( {{ job.date.start }} à {{ job.date.end }} )</span>
+            <i class="material-icons small right" style="transform: rotate(-90deg);">arrow_drop_down_circle</i>
+          </h4>
+          <div class="section-content">
+            <p>{{ job.place }} - {{ job.description }}</p>
+            <ul>
+            {% for objective in job.objectives %}
+              <li>{{ objective }}</li>
+            {% endfor %}
+            </ul>
+            {% if job.missions %}
+              <h5>Missions:</h5>
+              <ul class="collapsible" data-collapsible="expandable">
+                {% for mission in job.missions %}
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">queue</i><span class="mission-role">{{ mission.role }}</span>, <span class="mission-title">{{ mission.title }}</span>
+                     - <span class="mission-company">{{ mission.company }}</span> <span class="mission-date">({{ mission.date.duration }},
+                       {{ mission.date.start }} {% if mission.date.ended != true %} - en cours {% endif %})</span></div>
+                  <div class="collapsible-body">
+                    <p>{{ mission.description }}</p>
+                    <ul>
+                    {% for objective in mission.objectives %}
+                      <li>{{ objective }}</li>
+                    {% endfor %}
+                    </ul>
+
+                    <div class="mission-technology">
+                    {% for technology in mission.technologies %}
+                      <div class="chip">
+                        <i class="icon material-icons orange-text">toys</i>
+                        {{technology}}
+                      </div>
+                    {% endfor %}
+                    </div>
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            {% if job.technologies %}
+              <h5>Technologies:</h5>
+              <div class="mission-technology">
+              {% for technology in job.technologies %}
+                <div class="chip">
+                  <i class="icon material-icons orange-text">toys</i>
+                  {{technology}}
+                </div>
+              {% endfor %}
+              </div>
+            {% endif %}
+            </div>
+          </div>
+      {% endfor %}
+      </div>
+    {% endfor %}
+    </div>
+    <div class="col s12 m3">
+      <div class="card-panel annexe">
+        <h3><i class="material-icons">stars</i> Compétences</h3>
+        <ul>
+        {% for item in page.competences %}
+          <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="card-panel annexe">
+        <h3><i class="material-icons">book</i> Publications</h3>
+        <ul>
+        {% for item in page.books %}
+          <li>{{ item.title }}, {{ item.year }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="card-panel annexe">
+        <h3><i class="material-icons">school</i> Certifications</h3>
+        <ul>
+        {% for item in page.certifications %}
+          <li>{{ item.year}}: {{ item.title }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="card-panel annexe">
+        <h3><i class="material-icons">school</i> Formations</h3>
+        <ul>
+        {% for item in page.trainings %}
+          <li>{{ item.year}}: {{ item.title }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="card-panel annexe">
+        <h3><i class="material-icons">school</i> Diplômes</h3>
+        <ul>
+        {% for item in page.diplomes %}
+          <li>{{ item.year}}: {{ item.title }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="card-panel annexe">
+        <h3><i class="material-icons">language</i> Langues</h3>
+        <ul>
+        {% for item in page.languages %}
+          <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+  </footer>
+</article>

@@ -4,13 +4,11 @@
 
 /* TEAM */
   Owner: Grégory EVE
-  Site:
+  Site: http://www.geve.fr/
   Twitter: @geve82
   Location: Paris, France
 
 /* SITE */
-  Last update: 2012/07/21
   Standards: HTML5, CSS3
   Components: Jekyll, jQuery
   Doctype: HTML5
-

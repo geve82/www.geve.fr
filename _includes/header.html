@@ -1,0 +1,33 @@
+<header class="mdl-layout__header">
+  <div class="navbar-fixed">
+    <nav class="purple darken-4" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo"><img src="/img/icons/g.jpg" alt="GE" height="64" /></a>
+        <ul class="hide-on-med-and-down">
+          <li><a href="{{ "/" | prepend: site.baseurl }}"><i class="medium material-icons">home</i></a></li>
+          {% for my_page in site.pages %}
+            {% if my_page.title != "Accueil" %}
+              <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% for my_page in site.nav.links %}
+              <li><a href="{{ my_page.url }}" target="_blank">{{ my_page.title }}</a></li>
+          {% endfor %}
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
+          {% for my_page in site.pages %}
+            {% if my_page.title != "Accueil" %}
+              <li><a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% for my_page in site.nav.links %}
+              <li><a href="{{ my_page.url }}" target="_blank">{{ my_page.title }}</a></li>
+          {% endfor %}
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+</header>

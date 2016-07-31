@@ -1,0 +1,23 @@
+{% if page.slider %}
+{% assign slider_length = page.slider | size %}
+<div class="gallery autoplay items-{{ slider_length }}">
+  {% for item in (1..slider_length) %}
+    <div id="item-{{item}}" class="control-operator"></div>
+  {% endfor %}
+
+  {% for slide in page.slider %}
+    <figure class="item">
+      {% if slide.title %}
+      <span>{{slide.title}}</span>
+      {% endif %}
+      <img src="{{ slide.img | prepend: site.baseurl }}" alt="{{slide.title}}">
+    </figure>
+  {% endfor %}
+
+  <div class="controls">
+  {% for item in (1..slider_length) %}
+    <a href="#item-{{item}}" class="control-button">•</a>
+  {% endfor %}
+  </div>
+</div>
+{% endif %}

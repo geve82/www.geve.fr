@@ -1,19 +1,36 @@
-exclude: [".rvmrc", "README.md", "Rakefile", "Gemfile", "Gemfile.lock"]
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-auto:      true
-safe:      false
-lsi:       true
-pygments:  true
-permalink: /news/:title/
-markdown:  rdiscount
+# Site settings
+exclude: [".gitignore", "README.md", "Gemfile", "Gemfile.lock"]
+title: Gregory EVE
+email: gregory.eve@geve.fr
+description: > # this means to ignore newlines until "baseurl:"
+  Architecte et expert technique spécialiste des principes SOA
+  et de la mise en place de solutions d'ESB et de recherche d'entreprise.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.geve.fr" # the base hostname & protocol for your site
+permalink: /blog/:year/:title/
+author:
+  name: Gregory EVE
+  img: /img/photos/face-42.jpg
+  img_big: /img/photos/face-300.jpg
+twitter_username: geve82
+github_username:  geve82
+nav:
+  links:
+    - title: Généalogie
+      url: http://gw.geneanet.org/igreg82
+    - title: Github
+      url: http://github.com/geve82
+collections:
+- cv_experience
 
-# custom config
-cachebust: 1
-
-author :
-  name : Grégory EVE
-  github : geve82
-  twitter : geve82
-
-#plugins
-#MY_URL : http://www.geve.fr
+# Build settings
+markdown: kramdown
+timezone: Europe/Paris
+encoding: utf-8

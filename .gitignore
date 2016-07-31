@@ -1,5 +1,7 @@
-_site/*
+_site
 *~
 .buildpath
 .project
 .settings
+.sass-cache
+.jekyll-metadata

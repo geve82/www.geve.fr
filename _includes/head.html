@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <title>{{ site.title | escape }} | {{ page.title_full | default: page.title }}</title>
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <!--link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png" /-->
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="Gregory EVE" />
+  <!--link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" /-->
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <!--meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png" /-->
+  <meta name="msapplication-TileColor" content="#3372DF" />
+
+  <meta name="author" content="Gregory EVE" />
+  <link rel="author" href="{{ "/humans.txt" | prepend: site.baseurl }}" />
+
+  <!-- facebook Open graph -->
+  <meta property="og:url"           content="{{site.url}}{{ page.permalink | prepend: site.baseurl }}" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="{{ site.title | escape }} | {% if page.full_title %}{{ page.full_title | escape }}{% endif %}" />
+  <meta property="og:description"   content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:image"         content="{{site.url}}{{ page.og.img | default: site.author.img_big | prepend: site.baseurl }}" />
+
+  <!-- self hosted CSS frameworks -->
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" href="{{ "/css/material-icons.css" | prepend: site.baseurl }}" />
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+</head>

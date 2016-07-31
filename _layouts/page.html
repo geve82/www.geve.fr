@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col s12">
+    <article class="card-panel post">
+      <header>
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+        {% include slider.html %}
+        {% include share-panel.html %}
+      </header>
+      <main class="text-justify" itemprop="articleBody">
+        <blockquote class="excerpt">
+          {{ page.excerpt }}
+        </blockquote>
+        <div class="divider"></div>
+        <div class="section">
+          {{ content }}
+        </div>
+        <div class="divider"></div>
+      </main>
+    <footer>
+      <div class="tag-panel">
+      {% for tag in page.tags %}
+        <div class="chip">
+          <i class="icon material-icons orange-text">local_offer</i>
+          {{tag}}
+        </div>
+      {% endfor %}
+      </div>
+      {% include share-panel.html %}
+    </footer>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,239 @@
+body > div {
+  background: #e7e7f0 url('../img/photos/back.jpg') no-repeat fixed left top;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-right {
+  text-align: right;
+}
+
+img.circle {
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+
+    .secondary {
+      font-size:1.2rem;
+    }
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  border-left: 5px solid #e65100;
+}
+
+.chip .material-icons.icon {
+  float: left;
+  margin: 0 8px 0 -12px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  line-height: inherit;
+}
+
+.home-header {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-weight: 100;
+    font-size: 2.3rem;
+  }
+}
+
+a#logo-container + ul {
+  position: absolute;
+  left: 64px;
+}
+
+ul.blog.collection li {
+
+  &.collection-item {
+    &:hover {
+      @extend .orange, .lighten-4;
+    }
+
+    img {
+      height: 64px;
+    }
+
+    a {
+      @extend .black-text;
+    }
+
+    p.excerpt {
+      font-style: italic;
+      font-weight: lighter;
+    }
+
+    .collection-date {
+      color: #4a148c;
+    }
+  }
+
+  &.collection-header {
+    h4 {
+      display: inline-block;
+    }
+  }
+}
+
+.share-panel {
+  text-align: right;
+  padding: 20px;
+
+  & >iframe, & > div, & > span.IN-widget {
+    position: relative;
+    display: inline-block;
+    margin-left:10px !important;
+
+    &.fb-share-button span {
+      vertical-align: initial !important;
+    }
+  }
+}
+
+article.cv {
+  h3 {
+    font-weight: 300;
+    margin: 0 -20px;
+    padding: 20px;
+    background: #e65100;
+    box-sizing: initial;
+    color: white;
+  }
+
+  h4 {
+      border-bottom: 1px solid #e65100;
+      color: #e65100;
+  }
+
+  ul:not(.collapsible) {
+    list-style-type: initial;
+    margin: 20px 50px;
+
+    li {
+      list-style-type: initial;
+      margin-left: 10px;
+    }
+  }
+
+  .annexe {
+    font-size: 0.9rem;
+
+    h3 {
+      font-size: 1.4rem;
+      padding: 10px;
+      background: #4a148c;
+    }
+
+    ul:not(.collapsible) {
+      list-style-type: initial;
+      margin: 5px;
+    }
+  }
+
+  .mission-role {
+    font-weight: 600;
+  }
+
+  .mission-title {
+    font-style: italic;
+  }
+
+  .mission-company {
+    font-style: italic;
+    color: #e65100;
+  }
+
+  .misison-date {
+    color: gray;
+    font-style: italic;
+  }
+
+  .mission-technology {
+    margin: 20px;
+
+    .chip {
+      background: #ffe0b2;
+    }
+  }
+}
+
+article.post {
+  h1 {
+    font-weight: 300;
+    margin: 0 -20px;
+    padding: 20px;
+    background: #e65100;
+    box-sizing: initial;
+    color: white;
+  }
+
+  h2 {
+      border-bottom: 1px solid #e65100;
+      color: #e65100;
+  }
+
+  ul {
+    list-style-type: initial;
+    margin: 20px 50px;
+  }
+
+  li {
+    list-style-type: initial;
+    margin-left: 10px;
+  }
+
+  .original_post {
+    font-style: italic;
+    margin: 20px;
+  }
+
+  .tag-panel {
+    margin: 20px;
+  }
+
+  .material-placeholder {
+    text-align: center;
+
+    img.materialboxed {
+      display: inline-block;
+    }
+  }
+}

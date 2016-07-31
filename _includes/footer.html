@@ -1,4 +1,29 @@
-      <hr>
-      <footer>
-        <p>&copy; {{ site.author.name }}, architecte web et expert PHP. </p>
-      </footer>
+<footer class="purple darken-4 page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">{{site.author.name}}</h5>
+        <p class="grey-text text-lighten-4">{{site.description}}</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
+          {% for my_page in site.pages %}
+            {% if my_page.title != "Accueil" %}
+              <li><a class="grey-text text-lighten-3" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% for my_page in site.nav.links %}
+              <li><a class="grey-text text-lighten-3" href="{{ my_page.url }}" target="_blank">{{ my_page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2016 {{site.author.name}}
+    </div>
+  </div>
+</footer>
