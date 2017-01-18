@@ -1,7 +1,3 @@
 _site
-*~
-.buildpath
-.project
-.settings
 .sass-cache
 .jekyll-metadata

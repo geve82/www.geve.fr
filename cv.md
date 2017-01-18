@@ -14,6 +14,9 @@ books:
     publisher: Smile
     year: 2014
 certifications:
+  - year: 2017
+    title: WSO2 API Manager
+    place: WSO2 Inc.
   - year: 2013
     title: M102 MongoDB for DBAs
     place: MongoDb Inc. / 10Gen
