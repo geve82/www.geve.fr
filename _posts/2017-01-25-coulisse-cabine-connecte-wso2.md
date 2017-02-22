@@ -21,4 +21,4 @@ Ce webinar animé par Adrien Futschik et moi même présente l'architecture midd
 
 vidéo:
 
-{% youtube 'ZbZ759XhQBE' %}
+{% youtube {"id": "ZbZ759XhQBE" } %}

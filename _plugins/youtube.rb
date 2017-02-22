@@ -1,28 +1,37 @@
+require 'json'
+
 class YouTube < Liquid::Tag
-  Syntax = /^\s*([^\s]+)(\s+(\d+)\s+(\d+)\s*)?/
 
   def initialize(tagName, markup, tokens)
     super
     @content = markup
-    if markup =~ Syntax then
-      @id = $1
 
-      if $2.nil? then
+    begin
+      if( !@content.nil? && !@content.empty? )
+        jdata = JSON.parse(@content)
+        if( jdata.key?("id") )
+          @id = jdata["id"].strip
+        else
+          raise "No id provided in the \"youtube\" tag"
+        end
+        if( jdata.key?("width") )
+          @width = jdata["width"]
+        else
           @width = 560
+        end
+        if( jdata.key?("height") )
+          @height = jdata["height"]
+        else
           @height = 420
+        end
       else
-          @width = $2.to_i
-          @height = $3.to_i
+        raise "No params provided in the \"youtube\" tag"
       end
-    else
-      raise "No YouTube ID provided in the \"youtube\" tag"
     end
   end
 
   def render(context)
-  @id = "#{context[@content.strip]}"
-    # "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.youtube.com/embed/#{@id}\" frameborder=\"0\"allowfullscreen></iframe>"
-    "<iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.youtube.com/embed/#{@id}?color=white&theme=light\"></iframe>"
+    "<div class=\"media youtube\"><iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.youtube.com/embed/#{@id}?color=white&theme=light\"></iframe></div>"
   end
 
   Liquid::Template.register_tag "youtube", self
